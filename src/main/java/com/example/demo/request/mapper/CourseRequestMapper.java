@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.example.demo.repository.collection.Course;
 import com.example.demo.request.CourseRequest;
+import com.example.demo.request.CourseUpdateRequest;
 
 /**
  * @implNote Map request to data
@@ -22,5 +23,9 @@ public class CourseRequestMapper {
 		course.setCreatedDate(LocalDateTime.now());
 		course.setModifiedDate(LocalDateTime.now());
 		return course;
+	}
+	
+	public Course mapSaveCourseResponse(CourseUpdateRequest courseUpdateRequest) {
+		return modelMapper.map(courseUpdateRequest, Course.class);		
 	}
 }

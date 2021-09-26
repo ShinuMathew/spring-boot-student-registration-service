@@ -7,5 +7,4 @@ import com.example.demo.repository.collection.Course;
 public interface CourseRepository extends MongoRepository<Course, String> {
 
 	
-	
 }

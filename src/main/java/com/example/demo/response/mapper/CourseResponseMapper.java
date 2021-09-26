@@ -36,5 +36,8 @@ public class CourseResponseMapper {
 		}).collect(Collectors.toList());
 	}
 	
+	public CourseResponse mapCourseToCourseResponse(Course course) {
+		return modelMapper.map(course, CourseResponse.class);
+	}
 
 }
